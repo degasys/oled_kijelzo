@@ -1,0 +1,21 @@
+let feny = 0
+basic.showString("Hello!")
+let temp = input.temperature()
+basic.forever(function on_forever() {
+    
+    basic.showIcon(IconNames.Heart)
+    basic.pause(500)
+    basic.clearScreen()
+    basic.pause(200)
+    feny = input.lightLevel()
+    temp = input.temperature()
+    OLED.init(128, 64)
+    OLED.writeString("Hello ! ")
+    OLED.newLine()
+    OLED.writeString("A Homerseklet: ")
+    OLED.writeNumNewLine(temp)
+    OLED.writeString(" Celsius fok")
+    OLED.newLine()
+    OLED.writeString("A fenyerosseg: ")
+    OLED.writeNumNewLine(feny)
+})
